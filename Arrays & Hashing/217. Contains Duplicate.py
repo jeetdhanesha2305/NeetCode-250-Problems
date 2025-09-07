@@ -1,5 +1,16 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
+        # brute force 
+        # time complexity = O(n^2) 
+        # space complexity = O(1)
+        N = len(nums)
+
+        for i in range(i, N):
+            for j in range(i+1, N):
+                if nums[i] == nums[j]:
+                    return True 
+        return False
+
         # using hash set
         # time complexity = O(n)
         # space complexity = O(n)
